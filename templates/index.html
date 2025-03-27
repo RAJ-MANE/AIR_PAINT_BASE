@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Paint</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+</head>
+<body>
+    <h1>Air Paint Web App</h1>
+    <div class="container">
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
+        <canvas id="overlay"></canvas>
+    </div>
+    <div class="controls">
+        <button id="startDrawing">Start Drawing</button>
+        <button id="stopDrawing">Stop Drawing</button>
+        <button id="clear">Clear Canvas</button>
+    </div>
+    <div id="colorButtons">
+        <button class="color-button" style="background-color: red;" data-color="red"></button>
+        <button class="color-button" style="background-color: blue;" data-color="blue"></button>
+        <button class="color-button" style="background-color: green;" data-color="green"></button>
+        <button class="color-button" style="background-color: yellow;" data-color="yellow"></button>
+        <button class="color-button" style="background-color: black;" data-color="black"></button>
+        <button class="color-button" style="background-color: white;" data-color="white"></button>
+        <button class="color-button" style="background-color: pink;" data-color="pink"></button>
+        <button class="color-button" style="background-color: purple;" data-color="purple"></button>
+        <button class="color-button" style="background-color: orange;" data-color="orange"></button>
+        <button class="color-button" style="background-color: brown;" data-color="brown"></button>
+        <button class="color-button" style="background-color: gray;" data-color="gray"></button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
